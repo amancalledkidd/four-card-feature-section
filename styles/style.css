@@ -1,5 +1,91 @@
-* {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  background-color: hsl(0, 0%, 100%);
+  margin: 2rem;
+}
+
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+header {
+  text-align: center;
+  gap: 1rem;
+  margin: 2.5rem 0;
+  color: hsl(234, 12%, 34%);
+}
+header .title-light {
+  font: 200 2.25rem/1.4 "Poppins", serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+header .title-light .title-bold {
+  font: 600 2.25rem/1.4 "Poppins", serif;
+  font-size: 1.5rem;
+}
+header p {
+  font: 0.95rem/1.4 "Poppins", serif;
+  font-size: 1rem;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.card-wrapper .card {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 250px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.26);
+  border-radius: 8px;
+  padding: 2rem;
+}
+.card-wrapper .card h2 {
+  font: 600 1.25rem/1.35 "Poppins", serif;
+  color: hsl(234, 12%, 34%);
+  margin-bottom: 0.5rem;
+}
+.card-wrapper .card p {
+  font: 0.8rem/1.6 "Poppins", sans-serif;
+  color: hsl(212, 6%, 44%);
+}
+.card-wrapper .card img {
+  margin-top: 2rem;
+  align-self: flex-end;
+  width: 64px;
+  height: 64px;
+}
+.card-wrapper .supervisor {
+  border-top: hsl(180, 62%, 55%) 4px solid;
+}
+.card-wrapper .team {
+  border-top: hsl(0, 78%, 62%) 4px solid;
+}
+.card-wrapper .karma {
+  border-top: hsl(34, 97%, 64%) 4px solid;
+}
+.card-wrapper .calculator {
+  border-top: hsl(212, 86%, 64%) 4px solid;
 }
 
 /*# sourceMappingURL=style.css.map */

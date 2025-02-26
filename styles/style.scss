@@ -1,3 +1,125 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$clr-red: hsl(0, 78%, 62%);
+$clr-cyan: hsl(180, 62%, 55%);
+$clr-orange: hsl(34, 97%, 64%);
+$clr-blue: hsl(212, 86%, 64%);
+$clr-grey-500: hsl(234, 12%, 34%);
+$clr-grey-400: hsl(212, 6%, 44%);
+$clr-white: hsl(0, 0%, 100%);
+
+$space-500: 2.5rem;
+$space-400: 2rem;
+$space-300: 1.5rem;
+$space-200: 1rem;
+$space-100: 0.5rem; 
+
+
+$font-1: 600 2.25rem/1.4 "Poppins", serif;
+$font-2: 200 2.25rem/1.4 "Poppins", serif;
+$font-3: 600 1.25rem/1.35 "Poppins", serif;
+$font-4: 0.95rem/1.4 "Poppins", serif;
+$font-5: 0.8rem/1.6 "Poppins", sans-serif;
+
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
     margin: 0;
 }
+
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    background-color: $clr-white;
+    margin: $space-400;
+}
+
+h1, h2, h3, h4,
+button, input, label {
+    line-height: 1.1;
+}
+
+header {
+    text-align: center;
+    gap: $space-200;
+    margin: $space-500 0;
+    color: $clr-grey-500;
+
+    .title-light {
+        font:$font-2;
+        font-size: $space-300;
+        margin-bottom: $space-200;
+
+        .title-bold {
+            font:$font-1;
+            font-size: $space-300;
+        }
+    }
+
+    p {
+        font: $font-4;
+        font-size: $space-200;
+    }
+}
+
+.card-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: $space-400;
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+        height: 250px;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.26);
+        border-radius: 8px;
+        padding: $space-400;
+    
+        h2 {
+            font: $font-3;
+            color: $clr-grey-500;
+            margin-bottom: $space-100;
+        }
+    
+        p {
+            font: $font-5;
+            color: $clr-grey-400;
+        }
+    
+        img {
+            margin-top: $space-400;
+            align-self: flex-end;
+            width: 64px;
+            height: 64px;
+        }
+    }
+
+    .supervisor {
+        border-top: $clr-cyan 4px solid;
+    }
+    .team {
+        border-top: $clr-red 4px solid;
+    }
+    .karma {
+        border-top: $clr-orange 4px solid;
+    }
+    .calculator {
+        border-top: $clr-blue 4px solid;
+    }
+}
+
+
+
+
