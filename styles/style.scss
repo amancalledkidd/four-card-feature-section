@@ -40,7 +40,7 @@ body {
     min-height: 100vh;
     line-height: 1.5;
     background-color: $clr-white;
-    margin: $space-400;
+    
 }
 
 h1, h2, h3, h4,
@@ -51,17 +51,32 @@ button, input, label {
 header {
     text-align: center;
     gap: $space-200;
-    margin: $space-500 0;
+    margin: $space-500 auto;
     color: $clr-grey-500;
+    max-width: 540px;
+    width: 90%;
+
+    @media (min-width: 786px) {
+        margin: 5rem auto;
+    }
 
     .title-light {
         font:$font-2;
         font-size: $space-300;
         margin-bottom: $space-200;
 
+        @media (min-width: 786px) {
+            font:$font-2
+        }
+
         .title-bold {
             font:$font-1;
             font-size: $space-300;
+            display: block;
+
+            @media (min-width: 786px) {
+                font:$font-1
+            }
         }
     }
 
@@ -72,20 +87,33 @@ header {
 }
 
 .card-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    margin: auto;
+    min-width: 320px;
+    max-width: calc(1300px);
     gap: $space-400;
+
+    @media (min-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    @media (min-width: 1440px) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        column-gap: 0;
+    }
 
     .card {
         display: flex;
         flex-direction: column;
-        width: 350px;
+        width: clamp(300px, 90%, 375px);
         height: 250px;
         box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.26);
         border-radius: 8px;
         padding: $space-400;
+        justify-self: center;
+        align-self: center;
     
         h2 {
             font: $font-3;
@@ -108,6 +136,18 @@ header {
 
     .supervisor {
         border-top: $clr-cyan 4px solid;
+
+        @media (min-width: 768px) {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        @media (min-width: 1440px) {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
     }
     .team {
         border-top: $clr-red 4px solid;
@@ -117,6 +157,18 @@ header {
     }
     .calculator {
         border-top: $clr-blue 4px solid;
+
+        @media (min-width: 768px) {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+
+        @media (min-width: 1440px) {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
     }
 }
 
